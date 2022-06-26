@@ -36,7 +36,7 @@ async def start(event):
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**🐊 KarabakhTagBot Ayarları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/utaq sebeb - Üyeleri Tək Tək Etiketler**\n\n**/admins səbəb - Yöneticileri Tək Tək Tag Edər**\n\n**/start - botu başladır**"
+  helptext = "**🐊 AzeTagBot Ayarları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/utaq sebeb - Üyeleri Tək Tək Etiketler**\n\n**/admins səbəb - Yöneticileri Tək Tək Tag Edər**\n\n**/start - botu başladır**"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('Məni Qrupunuza Atın➕', 'https://t.me/qafkaztaggerbot?startgroup=a')],
@@ -49,10 +49,10 @@ async def help(event):
 	
 @client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
-  helptext = "**Çok özellikleri Etiket Botu Bulmaya Çalışan Grub Sahibleri @QafqazTaggerBot Size Göre:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Tekli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @LuciTaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
+  helptext = "**Çox özəllikli Tağ Botu Axtaran Qrub Sahibləri @AzeTagBot Sizə Görə:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Təkli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @LuciTaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Botu Gruba Ekle➕', 'https://t.me/QafqazTaggerbot?startgroup=a')],
+                      [Button.url('Məni Qrupuna At➕', 'https://t.me/AzeTagbot?startgroup=a')],
                     ),
                     link_preview=False
                    )
@@ -167,7 +167,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Dayanma Uğurla Dayandırıldı\n\n**Buda sizin reklamınız ola bilər @RiyaddBlog**❌")
+        await event.respond("Tağetmə Uğurla Dayandırıldı\n\n**Buda sizin reklamınız ola bilər @RiyaddBlog**❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -185,7 +185,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"👥 - [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
-        await event.respond("Dayanma uğurla dayandırıldı🤦🏾‍♂️")
+        await event.respond("Tağetmə uğurla dayandırıldı🤦🏾‍♂️")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -284,5 +284,5 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
-print(">> Bot çalıyor merak etme 🚀 @Thagiyevvvv bilgi alabilirsin <<")
+print(">> Bot çalıyor merak etmə 🚀 @Thagiyevvvv bilgi alabilirsin <<")
 client.run_until_disconnected()
