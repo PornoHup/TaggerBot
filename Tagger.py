@@ -24,13 +24,13 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🐊 AzeTagBot**\n ilə Qrupunuzdakı bütün adamları tağ edə bilərəm \nayarlar üçün =======> /help yazın**",
+  await event.reply("**🐊 AzeTaggerBot**\n ilə Qrupunuzdakı bütün adamları tağ edə bilərəm \nayarlar üçün =======> /help yazın**",
                     buttons=(
                    
-		      [Button.url('Məni Qrupunuza Atın ➕', 'https://t.me/karabakhtagbot?startgroup=a')],
-                      [Button.url('Support🛠', 'https://t.me/karabakhteamm')],
-                      [Button.url('Rəsmi Kanal📣', 'https://t.me/RiyaddBlog')],
-		      [Button.url('Sahibim👨🏻‍💻', 'https://t.me/Thagiyevvvv')],
+		      [Button.url('Məni Qrupunuza Atın ➕', 'https://t.me/AzeTaggerbot?startgroup=a')],
+                      [Button.url('Support🛠', 'https://t.me/SohbetPantera')],
+                      [Button.url('Rəsmi Kanal📣', 'https://t.me/ThagiyevvBlog')],
+		      [Button.url('Sahibim👨🏻‍💻', 'https://t.me/Thagiyevv')],
                     ),
                     link_preview=False
                    )
@@ -39,20 +39,20 @@ async def help(event):
   helptext = "**🐊 AzeTagBot Ayarları**\n\n**/tag <sebeb> - 5-li Etiket Atar**\n\n**/etag <sebeb> - Emoji ile etiketler**\n\n**/utaq səbəb - Userləri Tək Tək Etiketler**\n\n**/admins səbəb - Yöneticileri Tək Tək Tag Edər**\n\n**/start - botu başladır**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni Qrupunuza Atın➕', 'https://t.me/qafkaztaggerbot?startgroup=a')],
-                      [Button.url('Support👨‍💻', 'https://t.me/azeqafqaz2021')],
-                      [Button.url('Rəsmi Kanal🔖', 'https://t.me/RiyaddBlog')],
-		      [Button.url('Sahibim🧑‍🔧', 'https://t.me/Thagiyevvvv')],
+                      [Button.url('Məni Qrupunuza Atın➕', 'https://t.me/Azetaggerbot?startgroup=a')],
+                      [Button.url('Support👨‍💻', 'https://t.me/SohbetPantera')],
+                      [Button.url('Rəsmi Kanal🔖', 'https://t.me/ThagiyevvBlog')],
+		      [Button.url('Sahibim🧑‍🔧', 'https://t.me/Thagiyevv')],
                     ),
                     link_preview=False
                    )
 	
 @client.on(events.NewMessage(pattern="^/reklam$"))
 async def help(event):
-  helptext = "**Çox özəllikli Tağ Botu Axtaran Qrub Sahibləri @AzeTagBot Sizə Görə:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Təkli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @LuciTaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
+  helptext = "**Çox özəllikli Tağ Botu Axtaran Qrub Sahibləri @AzeTaggerBot Sizə Görə:\n\n📌 5-li etiket\n📌 Emoji etiket\n📌 Təkli Etiket\n📌 Yalnız Yöneticileri etiketleme\n📌\n\n Böyle Çok özellikli @LuciTaggerBot 'u grubunuza yönetici olarak ekleyip rahatlıkla üyelir , etiket ata bilirsiz **"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('Məni Qrupuna At➕', 'https://t.me/AzeTagbot?startgroup=a')],
+                      [Button.url('Məni Qrupuna At➕', 'https://t.me/AzeTaggerbot?startgroup=a')],
                     ),
                     link_preview=False
                    )
@@ -284,5 +284,5 @@ async def mentionall(tagadmin):
 		sleep(0.5)
 
 
-print(">> Bot çalıyor merak etmə 🚀 @Thagiyevvvv bilgi alabilirsin <<")
+print(">> Bot çalıyor merak etmə 🚀 @Thagiyevv bilgi alabilirsin <<")
 client.run_until_disconnected()
